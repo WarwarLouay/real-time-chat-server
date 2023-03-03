@@ -8,6 +8,9 @@ const notificationController = require("../Controllers/notification.controller")
 
 router.post("/user", userController.create);
 router.get("/user", userController.findAll);
+router.post("/user/verifycode", userController.verifyCode);
+router.post("/user/resendcode", userController.resendCode);
+router.post("/user/update", userController.updateProfile);
 
 router.post("/chat", chatController.create);
 router.get("/chat/:uid", chatController.findAll);
